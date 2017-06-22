@@ -32,10 +32,24 @@ public class Cesar {
             encryptText.append(alphabet.charAt(p));
         }
         System.out.println("Result ==>" + encryptText.toString());
+        System.out.println("\n");
         return encryptText.toString();
     }
 
     public String desencryption(String text) {
+        String textoToDesEncrypt = text.trim().replaceAll("\\s+","");
+        String alphabet="abcdefghijklmnñopqrstuvwxyz";
+        for(int i = 26; i >= 0; i--) {
+            System.out.println("ROT"+i);
+            for(char c : textoToDesEncrypt.toLowerCase().toCharArray()) {
+                if(alphabet.indexOf(c)-i < 0){
+                    System.out.print( alphabet.charAt( Math.abs(27 + (alphabet.indexOf(c)-i))) );
+                } else {
+                    System.out.print( alphabet.charAt( Math.abs(alphabet.indexOf(c)-i)) );
+                }
+            }
+            System.out.println("\n");
+        }
         return "";
     }
 
