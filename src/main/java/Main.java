@@ -3,7 +3,11 @@ import simple.Cesar;
 public class Main {
 
     public static void main(String[] args) {
-        new Cesar().encryption("wiki", 6);
-        new Cesar().desencryption(new Cesar().encryption("wiki", 20));
+
+        String firstCipher = "gluhtlishjrvbadvyyplkaohavbyjpwolypzavvdlhrvuuleatlzzhnlzdpajoavcpnlulyljpwolyrlfdvykpzaolopkkluzftivsvmklhaoputfmhcvypalovsilpuluk";
+        String secondCipher = "vwduwljudeehghyhubwklqjlfrxogilqgsohdvhuhwxuqdqbeoxhsulqwviruydxowdqgdodupghvljqedvhgrqzklfkedqnbrxghflghrqldpvhwwlqjxsvdihkrxvhfr";
+
+        //new Cesar().encryption("wiki", 6);
+        new Cesar().desencryption(firstCipher);
     }
 }

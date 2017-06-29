@@ -38,6 +38,23 @@ public class Cesar {
 
     public String desencryption(String text) {
         String textoToDesEncrypt = text.trim().replaceAll("\\s+","");
+        String alphabet="abcdefghijklmnopqrstuvwxyz";
+        for(int i = 26; i >= 0; i--) {
+            System.out.println("ROT"+i);
+            for(char c : textoToDesEncrypt.toLowerCase().toCharArray()) {
+                if(alphabet.indexOf(c)-i < 0){
+                    System.out.print( alphabet.charAt( Math.abs(26 + (alphabet.indexOf(c)-i))) );
+                } else {
+                    System.out.print( alphabet.charAt( Math.abs(alphabet.indexOf(c)-i)) );
+                }
+            }
+            System.out.println("\n");
+        }
+        return "";
+    }
+
+    public String desencryptionSpanish(String text) {
+        String textoToDesEncrypt = text.trim().replaceAll("\\s+","");
         String alphabet="abcdefghijklmnñopqrstuvwxyz";
         for(int i = 26; i >= 0; i--) {
             System.out.println("ROT"+i);
