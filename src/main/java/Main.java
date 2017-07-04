@@ -1,4 +1,5 @@
 import algorithm.BinarySearch;
+import algorithm.Sorting;
 import simple.Cesar;
 
 import java.util.Arrays;
@@ -30,6 +31,11 @@ public class Main {
 
         // binary search does not work for strings
         System.out.println(Arrays.binarySearch(stringItem, "Lucas"));
+
+        int[] arr = {5, 3, 6, 2, 10, 0, 10, 30, -1, 9, 100};
+        int[] sort = Sorting.selectionSort(arr);
+
+        System.out.println(Arrays.toString(sort));
 
     }
 }

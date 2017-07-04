@@ -39,16 +39,14 @@ public class BinarySearch {
 
             mid = (high - low) / 2;
 
-            if(list[mid].toLowerCase().compareTo(item.toLowerCase()) < 0) {
+            if(list[mid].compareTo(item) < 0) {
                 low = mid + 1;
-            } else if (list[mid].toLowerCase().compareTo(item.toLowerCase()) > 0) {
+            } else if (list[mid].compareTo(item) > 0) {
                 high = mid - 1;
             } else {
                 return mid;
 
             }
-
-            System.out.println("mid" + mid);
 
         }
 
