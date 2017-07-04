@@ -14,7 +14,7 @@ public class BinarySearch {
         int high = list.length - 1;
 
         while (low <= high) {
-            int mid = low + high;
+            int mid = (low + high) / 2;
             int guess = list[mid];
             System.out.println("guess => " + guess);
             if(guess == item) {
@@ -26,7 +26,33 @@ public class BinarySearch {
             }
         }
 
-        return null;
+        return -1;
+    }
+
+    // ONLY FOR TEST
+    public static Integer lookup(String[] list, String item) {
+        int low = 0;
+        int high = list.length - 1;
+        int mid;
+
+        while (low <= high) {
+
+            mid = (high - low) / 2;
+
+            if(list[mid].toLowerCase().compareTo(item.toLowerCase()) < 0) {
+                low = mid + 1;
+            } else if (list[mid].toLowerCase().compareTo(item.toLowerCase()) > 0) {
+                high = mid - 1;
+            } else {
+                return mid;
+
+            }
+
+            System.out.println("mid" + mid);
+
+        }
+
+        return -1;
     }
 
 }
